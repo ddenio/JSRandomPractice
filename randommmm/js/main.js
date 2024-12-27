@@ -1,12 +1,9 @@
-function sortByValueAndIndex(x){
-  //given initial 2-value array, x. Calculate a score.
-  //if both values in x are numbers, score is the sum of the two. if one is anumber the score is that nubmer, if neither is a number, return "Void!"
-  //once you ahve score, return an array of arrays, each sub array will be the same as x and the numbe rof sub arrasys equal to score
-  let [a,b] = x
-  if (typeof a === "number" && typeof b === "number") return new Array(a+b).fill(x)
-  else if(typeof a === "number") return new Array(a).fill(x)
-  else if(typeof b === "number") return new Array(b).fill(x)
-  return "Void!"
+function sortByValueAndIndex(arr1,arr2){
+  //given 2 arrays arr2 is indexes of arr1 we want to keep
+  //use map() method to map arr2 to arr1[arr2]
+  //but first we want to filter out any indexes in arr2 that dont exist in arr1, e.g., if arr2 > arr1.length we dont want to keep, keep only indexes that are in arr1 length range
+  return arr2.filter(index => index < arr1.length).map(e => arr1[e])
+  
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -29,13 +26,15 @@ function sortByValueAndIndex(x){
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
 //console.log(sortByValueAndIndex([34.5,56.2,11,13]))
-console.log(sortByValueAndIndex([2,1]))
+//console.log(sortByValueAndIndex([2,1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
 //console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
 //console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
+//console.log(sortByValueAndIndex([17,17,17,3,17,17,17]))
+console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3]))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
