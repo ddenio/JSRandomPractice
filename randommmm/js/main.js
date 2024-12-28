@@ -1,7 +1,12 @@
-function sortByValueAndIndex(s1){
-  //Given an object of key--value pairs
-  //return just the names of the languages that had a score above 59, and are sorted by dsecnding score
-  return Object.keys(s1).filter(e => s1[e] > 59).sort((a,b) => s1[b] - s1[a])
+function sortByValueAndIndex(x){
+  //given initial 2-value array, x. Calculate a score.
+  //if both values in x are numbers, score is the sum of the two. if one is anumber the score is that nubmer, if neither is a number, return "Void!"
+  //once you ahve score, return an array of arrays, each sub array will be the same as x and the numbe rof sub arrasys equal to score
+  let [a,b] = x
+  if (typeof a === "number" && typeof b === "number") return new Array(a+b).fill(x)
+  else if(typeof a === "number") return new Array(a).fill(x)
+  else if(typeof b === "number") return new Array(b).fill(x)
+  return "Void!"
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -24,12 +29,12 @@ function sortByValueAndIndex(s1){
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
 //console.log(sortByValueAndIndex([34.5,56.2,11,13]))
-//console.log(sortByValueAndIndex(["a","b"]))
+console.log(sortByValueAndIndex([2,1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
 //console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
 //console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
-console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
+//console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
