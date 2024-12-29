@@ -1,7 +1,7 @@
 function sortByValueAndIndex(s1){
-  //Find all duplicates in an array
-  //filter method, indexOf() !== lastIndexOf()
-  return s1.filter(e => s1.indexOf(e) !== s1.lastIndexOf(e))
+  //Given an object of key--value pairs
+  //return just the names of the languages that had a score above 59, and are sorted by dsecnding score
+  return Object.keys(s1).filter(e => s1[e] > 59).sort((a,b) => s1[b] - s1[a])
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -15,7 +15,7 @@ function sortByValueAndIndex(s1){
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
-console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
+//console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
@@ -29,7 +29,7 @@ console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
 //console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
 //console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
-//console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65}))
+console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
