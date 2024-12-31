@@ -1,20 +1,21 @@
 function sortByValueAndIndex(s1){
-  //seperate a string by word length
-  return s1.split(' ').sort((a,b) => a.length-b.length).join(' ')
+  //Find all duplicates in an array
+  //filter method, indexOf() !== lastIndexOf()
+  return s1.filter(e => s1.indexOf(e) !== s1.lastIndexOf(e))
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
+//console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(69))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
-//console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
+console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
