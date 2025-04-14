@@ -3,8 +3,8 @@ function sortByValueAndIndex(s1,s2){
   //return new SORTED string, only 1 of each letter
   //concat two arrays, use 'new set()' to get distinc letters
   let combinedArr = s1.concat(s2).split('').sort()
-  console.log(combinedArr)
-  return new Set(combinedArr)
+  //console.log(combinedArr)
+  return Array.from(new Set(combinedArr)).join('')
   
 }
 
