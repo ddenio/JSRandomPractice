@@ -1,7 +1,11 @@
-function sortByValueAndIndex(arr){
-  //return an array where each object has old properties AND new 'gretting' property with following string value: hi <person's name>, what do you like most about <language here>?
-  //map method to modify each object, use {... } spread operator to keep all old properties, then add new greeting property
-  return arr.map(e => ({...e, greeting: `Hi ${e.firstName}, what do you like most about ${e.language}?`}))
+function sortByValueAndIndex(s1,s2){
+  //take two strings s1 and s2 including only letters from a to z. 
+  //return new SORTED string, only 1 of each letter
+  //concat two arrays, use 'new set()' to get distinc letters
+  let combinedArr = s1.concat(s2).split('').sort()
+  console.log(combinedArr)
+  return new Set(combinedArr)
+  
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -13,7 +17,7 @@ function sortByValueAndIndex(arr){
 //console.log(sortByValueAndIndex(69))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
-//console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
+console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
@@ -31,11 +35,11 @@ function sortByValueAndIndex(arr){
 //console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
-console.log(sortByValueAndIndex([
-  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-]))
+// console.log(sortByValueAndIndex([
+//   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ]))
 // function sortByValueAndIndex(jewels,stones) {
 //   let final = []
 //    const map = {}
