@@ -1,5 +1,7 @@
-function sortByValueAndIndex(str,arr){
-  return arr.filter(e => e.split('').sort().join('') === str.split('').sort().join(''))
+function sortByValueAndIndex(arr){
+  //determine which items in array have no duplicates (only appear once)
+  //filter method
+  return arr.filter(e => arr.indexOf(e) === arr.lastIndexOf(e))
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -13,7 +15,7 @@ function sortByValueAndIndex(str,arr){
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
-//console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
+console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
@@ -25,7 +27,7 @@ function sortByValueAndIndex(str,arr){
 //console.log(sortByValueAndIndex(["a","b"]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
-console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
+//console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
 //console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9))
