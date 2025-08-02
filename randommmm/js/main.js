@@ -1,7 +1,8 @@
 function sortByValueAndIndex(arr1){
-  //Given an array of numbers, return an array, with each element rounded to nearest number divisible by 5
-  //normalize by using map method to divide all numbers by 5, then Math.round(), then multiply by 5 to get correct element value
-  return arr1.map(e => Math.round(e/5)*5)
+  //Unscramble the eggs.
+  //The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
+  //replace method on all instances of 'egg' ; replace with ''
+  return arr1.replace(/egg/g,'')
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -23,7 +24,7 @@ function sortByValueAndIndex(arr1){
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
-console.log(sortByValueAndIndex([34.5,56.2,11,13]))
+//console.log(sortByValueAndIndex([34.5,56.2,11,13]))
 //console.log(sortByValueAndIndex([2,1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
@@ -32,7 +33,8 @@ console.log(sortByValueAndIndex([34.5,56.2,11,13]))
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
 //console.log(sortByValueAndIndex([17,17,17,3,17,17,17]))
-//console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3]))
+//console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
+console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
