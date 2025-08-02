@@ -1,8 +1,7 @@
 function sortByValueAndIndex(arr1){
-  //Unscramble the eggs.
-  //The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
-  //replace method on all instances of 'egg' ; replace with ''
-  return arr1.replace(/egg/g,'')
+  //how do we sort an array of numbers from lowest to hights?
+  //sort function, but with (a,b) => a-b
+  return arr1.sort((a,b) => a-b)
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -13,7 +12,7 @@ function sortByValueAndIndex(arr1){
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(69))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
-//console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
+console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
@@ -34,7 +33,7 @@ function sortByValueAndIndex(arr1){
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
 //console.log(sortByValueAndIndex([17,17,17,3,17,17,17]))
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
-console.log(sortByValueAndIndex("Beggegeggineggnegg"))
+//console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
