@@ -1,7 +1,9 @@
 function sortByValueAndIndex(arr1,arr2){
   //You are given two arrays arr1 and arr2, where arr2 always contains integers. Arr2 is the indexes of arr1 that we want to keep the values of.
   //thinking map function to map arr2 with the values from arr1
-  return arr2.map(e => arr1[e])
+  //* we first want to filter out any indexes that dont exist in arr1
+  //return arr2.map(e => arr1[e])
+  return arr2.filter(index => index < arr1.length).map(e => arr1[e])
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -34,7 +36,7 @@ function sortByValueAndIndex(arr1,arr2){
 //console.log(sortByValueAndIndex([17,17,17,3,17,17,17]))
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
-console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0]))
+console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
