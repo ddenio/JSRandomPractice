@@ -1,9 +1,9 @@
-function sortByValueAndIndex(arr1){
-//   You will be given an array of objects (associative arrays in PHP, tables in COBOL) representing data about developers who have signed up to attend the next coding meetup that you are organising.
-// Your task is to return an array where each object will have a new property 'greeting' with the following string value:
-// Hi < firstName here >, what do you like the most about < language here >?
-//Its an array argument, I want to map so that I can add the 'greeting' property
-  return arr1.map(e => ({...e, greeting: `Hi ${e.firstName}, what do you like most about ${e.language}?`}))
+function sortByValueAndIndex(arr1, jason){
+//   It's Friday the 13th, and Jason is ready for his first killing spree!
+// Create a function, killcount, that accepts two arguments: an array of array pairs (the conselor's name and intelligence - ["Chad", 2]) and an integer representing Jason's intellegence.
+//Your function must return an array of the names of all the counselors who can be outsmarted and killed by Jason.
+// so we have an array, we can filter out the counselors that outsmart Jason, and then map/return the names of the counselors that are outsmarted.
+  return arr1.filter(e => e[1] < jason).map(e => e[0])
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -30,18 +30,18 @@ function sortByValueAndIndex(arr1){
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
 //console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
-//console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
+console.log(sortByValueAndIndex([["Chad",2],["Tommy",9],["Clara",4],["Tamara",5],["colton",10]], 7))
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9)) 
 //console.log(sortByValueAndIndex([17,17,17,3,17,17,17]))
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
-console.log(sortByValueAndIndex([
-  { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
-  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
-  { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
-]))
+// console.log(sortByValueAndIndex([
+//   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ]))
 // function sortByValueAndIndex(jewels,stones) {
 //   let final = []
 //    const map = {}
