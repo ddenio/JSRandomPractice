@@ -1,12 +1,11 @@
-    // How could i solve this javascript problem:
-
-    // Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
-    //iterate through word, use slice with iterations to add all combinations of word into new array
-    function sortByValueAndIndex(str){
-       let final = []
-       for(let i = 0; i < str.length; i++){
-            final.push(str.toUpperCase().slice(i)+ str.toUpperCase().slice(0,i))
-       }return final
+    //     How could we solve this JS problem: Given an array of numbers, return an array, with each member of input array rounded to a nearest number, divisible by 5.
+    // For example, given the following array:
+    // [34.5, 56.2, 11, 13]
+    // should return
+    // [35, 55, 10, 15]
+        //want to use map method, divide each element by 5 and use Math.round to normalize it, then multiply by 5 again 
+    function sortByValueAndIndex(arr){
+       return arr.map(e => Math.round(e/5)*5)
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -28,7 +27,7 @@
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
-//console.log(sortByValueAndIndex([34.5,56.2,11,13]))
+console.log(sortByValueAndIndex([34.5,56.2,11,13]))
 //console.log(sortByValueAndIndex(["a",1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
@@ -41,7 +40,7 @@
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
-console.log(sortByValueAndIndex("codewars"))
+//console.log(sortByValueAndIndex("codewars"))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
