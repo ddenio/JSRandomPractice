@@ -1,16 +1,19 @@
-    //Given a string of spaced seperated numbers, how could i go about returning the highest and lowest Number?
-        //start by splitting string by " " spaces, then use Math.min(...arr) and Math.max(...arr)
+    //     How could i solve this js problem:
+
+    // Write a function that always returns 5
+    // Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+        //could do a string that only has a length of 5, use "tacos.length"
     function sortByValueAndIndex(arr){
-       arr = arr.split(" ")
-       return `${Math.min(...arr)}, ${Math.max(...arr)}`
+       return "tacos".length
     }
 
+console.log(sortByValueAndIndex())
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
-console.log(sortByValueAndIndex("1 7 3 4"))
+//console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
