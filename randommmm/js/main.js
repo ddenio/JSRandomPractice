@@ -1,7 +1,6 @@
-    //How can I merge these two arrays, and only keep 1 of each number (no duplicates)? [1,3,5,7,9,11,12], [1,2,3,4,5,10,12]
-
-    function sortByValueAndIndex(arr1,arr2){
-        return Array.from(new Set(arr1.concat(arr2)))
+    //How do we split up a numbers digits into individual elements in an array for sorting, then sort the digits into descending order, making the largest possible number?
+    function sortByValueAndIndex(num){
+        return num.toString().split('').sort((a,b) => b-a).map(Number).join('')
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -10,7 +9,7 @@
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
 //console.log(sortByValueAndIndex("1 7 3 4"))
-//console.log(sortByValueAndIndex(69))
+console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
@@ -35,7 +34,7 @@
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
-console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
+//console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
