@@ -1,6 +1,7 @@
-    //How can i write a function that removes the first and last character of a string?
-    function sortByValueAndIndex(arr){
-       return arr.slice(1,-1)
+    //How could we Define a method/function that removes from a given array of integers all the values contained in a second array.
+    //use filter method, use include method
+    function sortByValueAndIndex(arr1, arr2){
+       return arr1.filter(e => !arr2.includes(e))
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -10,7 +11,7 @@
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
-//console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
+console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
@@ -18,7 +19,7 @@
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
-console.log(sortByValueAndIndex('jOhnAthAn'))
+//console.log(sortByValueAndIndex('jOhnAthAn'))
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
