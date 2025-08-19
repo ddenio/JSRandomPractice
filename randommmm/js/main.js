@@ -1,11 +1,8 @@
-    //     How could we solve this JS problem: Given an array of numbers, return an array, with each member of input array rounded to a nearest number, divisible by 5.
-    // For example, given the following array:
-    // [34.5, 56.2, 11, 13]
-    // should return
-    // [35, 55, 10, 15]
-        //want to use map method, divide each element by 5 and use Math.round to normalize it, then multiply by 5 again 
+    //Given a string of spaced seperated numbers, how could i go about returning the highest and lowest Number?
+        //start by splitting string by " " spaces, then use Math.min(...arr) and Math.max(...arr)
     function sortByValueAndIndex(arr){
-       return arr.map(e => Math.round(e/5)*5)
+       arr = arr.split(" ")
+       return `${Math.min(...arr)}, ${Math.max(...arr)}`
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -13,7 +10,7 @@
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
-//console.log(sortByValueAndIndex("1 7 3 4"))
+console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
 //console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
@@ -27,7 +24,7 @@
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
-console.log(sortByValueAndIndex([34.5,56.2,11,13]))
+//console.log(sortByValueAndIndex([34.5,56.2,11,13]))
 //console.log(sortByValueAndIndex(["a",1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
