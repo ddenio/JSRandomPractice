@@ -1,20 +1,14 @@
-function sortByValueAndIndex(x){
-//   You are given an initial 2-value array (x). You will use this to calculate a score.
-// If both values in (x) are numbers, the score is the sum of the two. If only one is a number, the score is that number. If neither is a number, return 'Void!'.
-// Once you have your score, you must return an array of arrays. Each sub array will be the same as (x) and the number of sub arrays should be equal to the score.
-// For example:
-// if (x) == ['a', 3] you should return [['a', 3], ['a', 3], ['a', 3]].
+// How can I write a function to convert a list of string numbers, seperated by a colon :, into a list of comma seperated numbers?
 
-    //use type of to determine if both values in x are numbers
-    //deconstruct input, x to [a,b]
-    let [a,b] = x
-    if (typeof a === 'number' && typeof b === 'number') return new Array(a+b).fill(x)
-    else if ( typeof a === 'number') return new Array(a).fill(x)
-    else if (typeof b === 'number') return new Array(b).fill(x)
-        return 'Void!'
+// e.g. starting out with let matches = ["3:1", "2:2", "0:1", "4:0", "1:2", "2:0", "3:3", "1:0", "0:0", "2:1"];
+
+// const func = (arg1, arg2) => return expression
+
+function sortByValueAndIndex(arr){
+    return arr.map(item => item.split(':').map(Number))
 }
 
-//console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
+console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
@@ -34,7 +28,7 @@ function sortByValueAndIndex(x){
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
 //console.log(sortByValueAndIndex([34.5,56.2,11,13]))
-console.log(sortByValueAndIndex(["a",1]))
+//console.log(sortByValueAndIndex(["a",1]))
 // console.log(sortByValueAndIndex("trisf", ["first"]))
 //console.log(sortByValueAndIndex("ainstuomn", ["mountains", "hills", "mesa"]))
 //console.log(sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]))
