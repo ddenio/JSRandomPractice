@@ -1,12 +1,11 @@
-    // How could i go about solving this problem:
-    // Write a function which takes a list of strings and returns each line prepended by the correct number.
+    //How can i write a function that removes the first and last character of a string?
     function sortByValueAndIndex(arr){
-        return arr.map((e,index) => `${index+1}: ${e}`)
+       return arr.slice(1,-1)
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex("a         **&*&c"))
-console.log(sortByValueAndIndex(['a','b','b','d']))
+//console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart")) 
 //console.log(sortByValueAndIndex("1 7 3 4"))
@@ -19,7 +18,7 @@ console.log(sortByValueAndIndex(['a','b','b','d']))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
-//console.log(sortByValueAndIndex('jOhnAthAn'))
+console.log(sortByValueAndIndex('jOhnAthAn'))
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
