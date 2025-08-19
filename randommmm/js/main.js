@@ -1,14 +1,10 @@
-// How can I write a function to convert a list of string numbers, seperated by a colon :, into a list of comma seperated numbers?
+    //How can I merge these two arrays, and only keep 1 of each number (no duplicates)? [1,3,5,7,9,11,12], [1,2,3,4,5,10,12]
 
-// e.g. starting out with let matches = ["3:1", "2:2", "0:1", "4:0", "1:2", "2:0", "3:3", "1:0", "0:0", "2:1"];
+    function sortByValueAndIndex(arr1,arr2){
+        return Array.from(new Set(arr1.concat(arr2)))
+    }
 
-// const func = (arg1, arg2) => return expression
-
-function sortByValueAndIndex(arr){
-    return arr.map(item => item.split(':').map(Number))
-}
-
-console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
+//console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
@@ -39,6 +35,7 @@ console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
+console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
