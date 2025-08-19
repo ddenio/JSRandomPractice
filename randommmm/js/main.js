@@ -1,15 +1,12 @@
-//     How do we solve this JavaScript problem:
+    // How could i solve this javascript problem:
 
-// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
-// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
-// Examples:
-// * With `name` = "john"  => return "Hello, John!"
-// * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
-//   or `name` = ""        => return "Hello, World!"
-//typeof = 'string' to find if its a name, then use string[0].toUpperCase() + string.slice(1).toLowerCase() to get the case right
-    function sortByValueAndIndex(obj){
-       return typeof obj === 'string' ? `Hello, ${obj[0].toUpperCase()+obj.slice(1).toLowerCase()}!` : "Hello, World!"
+    // Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
+    //iterate through word, use slice with iterations to add all combinations of word into new array
+    function sortByValueAndIndex(str){
+       let final = []
+       for(let i = 0; i < str.length; i++){
+            final.push(str.toUpperCase().slice(i)+ str.toUpperCase().slice(0,i))
+       }return final
     }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -27,7 +24,7 @@
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
-console.log(sortByValueAndIndex(324354))
+//console.log(sortByValueAndIndex(324354))
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"))
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
@@ -44,6 +41,7 @@ console.log(sortByValueAndIndex(324354))
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
+console.log(sortByValueAndIndex("codewars"))
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
