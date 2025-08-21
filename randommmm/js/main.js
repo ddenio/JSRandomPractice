@@ -1,14 +1,12 @@
-    //     How could i solve this JS problem:
+   //How can we easily solve this problem (which method)?
 
-    // You are given two arrays arr1 and arr2, where arr2 always contains integers. Arr2 is the indexes of arr1 that we want to keep the values of.
-    // Write a function such that:
-    // For arr1 = ['a', 'a', 'a', 'a', 'a'], arr2 = [2, 4] the function returns ['a', 'a']
-    // For arr1 = [0, 1, 5, 2, 1, 8, 9, 1, 5], arr2 = [1, 4, 7] the function returns [1, 1, 1]
-    // For arr1 = [0, 3, 4], arr2 = [2, 6] the function returns [4]
-    // For arr1=["a","b","c","d"] , arr2=[2,2,2], the function returns ["c","c","c"]
-    // For arr1=["a","b","c","d"], arr2=[3,0,2] the function returns ["d","a","c"]
-    function sortByValueAndIndex(arr1,arr2){
-       return arr2.filter(e => e < arr1.length).map(ind => arr1[ind])
+//Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+// Some cases:
+// [22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+// [68, -1, 1, -7, 10, 10] => [-1, 10]
+   //I could use filter method with arguments of (element, index) and modulus to find which ones are multiples of indexes
+    function sortByValueAndIndex(arr){
+       return arr.filter((e,index) => e % index === 0)
     }
 
 //console.log(sortByValueAndIndex())
@@ -20,7 +18,7 @@
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7])) 
-//console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
+console.log(sortByValueAndIndex([22,-6,32,82,9,25])) 
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3")) 
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
@@ -42,7 +40,7 @@
 //console.log(sortByValueAndIndex([17,17,17,"a",17,17,17]))
 //console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3])) 
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
-console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
+//console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 //console.log(sortByValueAndIndex("codewars"))
 // console.log(sortByValueAndIndex([
