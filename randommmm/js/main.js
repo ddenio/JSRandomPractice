@@ -1,24 +1,15 @@
-// How could we solve this JS problem:
-
-// Pirates have notorious difficulty with enunciating. They tend to blur all the letters together and scream at people.
-// At long last, we need a way to unscramble what these pirates are saying.
-// Write a function that will accept a jumble of letters as well as a dictionary, and output a list of words that the pirate might have meant.
-// For example:
-// grabscrab( "ortsp", ["sport", "parrot", "ports", "matey"] )
-// Should return ["sport", "ports"].
-// Return matches in the same order as in the dictionary. Return an empty array if there are no matches.
-//I could sort the str and then go through each word in the array with each of those words sorted and compare the two.
-function sortByValueAndIndex(str, arr) {
-  return arr.filter(
-    (e) => e.split("").sort().join("") === str.split("").sort().join(""),
-  );
+// How can we grab just even numbers from an array and return a new array with these numbers?
+//filter arr, compare to modulus % 2 === 0
+function sortByValueAndIndex(arr) {
+  const evens = arr.filter((e) => e % 2 === 0);
+  return evens;
 }
 
 //console.log(sortByValueAndIndex())
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
-console.log(
-  sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
-);
+// console.log(
+//   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
+// );
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(['a','b','b','d']))
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
@@ -26,7 +17,7 @@ console.log(
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
-//console.log(sortByValueAndIndex([22,-6,32,82,9,25]))
+console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
