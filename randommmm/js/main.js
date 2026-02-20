@@ -1,8 +1,14 @@
-// How can we grab just even numbers from an array and return a new array with these numbers?
-//filter arr, compare to modulus % 2 === 0
-function sortByValueAndIndex(arr) {
-  const evens = arr.filter((e) => e % 2 === 0);
-  return evens;
+// How can we Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+//combine a and b, return a new sorted set.
+function sortByValueAndIndex(a, b) {
+  return [...new Set(a + b)].sort().join("");
 }
 
 //console.log(sortByValueAndIndex())
@@ -17,7 +23,7 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
-console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
@@ -42,6 +48,7 @@ console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 //console.log(sortByValueAndIndex("codewars"))
+console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
