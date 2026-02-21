@@ -1,17 +1,12 @@
-// How can we Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
-// Examples:
-// a = "xyaabbbccccdefww"
-// b = "xxxxyyyyabklmopq"
-// longest(a, b) -> "abcdefklmopqwxy"
+// How could i solve this js problem:
 
-// a = "abcdefghijklmnopqrstuvwxyz"
-// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
-//combine a and b, return a new sorted set.
-function sortByValueAndIndex(a, b) {
-  return [...new Set(a + b)].sort().join("");
+// Write a function that always returns 5
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+function sortByValueAndIndex() {
+  return "five!".length;
 }
 
-//console.log(sortByValueAndIndex())
+console.log(sortByValueAndIndex());
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 // console.log(
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
@@ -48,7 +43,7 @@ function sortByValueAndIndex(a, b) {
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 //console.log(sortByValueAndIndex("codewars"))
-console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+//console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(sortByValueAndIndex([
 //   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
 //   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
