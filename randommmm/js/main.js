@@ -1,12 +1,16 @@
-// How could i solve this js problem:
+// How can we Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
 
-// Write a function that always returns 5
-// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
-function sortByValueAndIndex() {
-  return "five!".length;
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+function sortByValueAndIndex(s1, s2) {
+  return Array.from(new Set((s1 + s2).split("").sort())).join("");
 }
 
-console.log(sortByValueAndIndex());
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
 // console.log(
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
@@ -19,7 +23,7 @@ console.log(sortByValueAndIndex());
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
-//console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"))
+console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
