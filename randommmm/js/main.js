@@ -1,14 +1,18 @@
-// How can we Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
-// Examples:
-// a = "xyaabbbccccdefww"
-// b = "xxxxyyyyabklmopq"
-// longest(a, b) -> "abcdefklmopqwxy"
+// You are given two arrays arr1 and arr2, where arr2 always contains integers. Arr2 is the indexes of arr1 that we want to keep the values of.
+// Write a function such that:
+// For arr1 = ['a', 'a', 'a', 'a', 'a'], arr2 = [2, 4] the function returns ['a', 'a']
+// For arr1 = [0, 1, 5, 2, 1, 8, 9, 1, 5], arr2 = [1, 4, 7] the function returns [1, 1, 1]
+// For arr1 = [0, 3, 4], arr2 = [2, 6] the function returns [4]
+// For arr1=["a","b","c","d"] , arr2=[2,2,2], the function returns ["c","c","c"]
+// For arr1=["a","b","c","d"], arr2=[3,0,2] the function returns ["d","a","c"]
 
-// a = "abcdefghijklmnopqrstuvwxyz"
-// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+//first I want to filter out any possible indexes in arr2 that don't exist in arr1
+//then we can return arr1[arr2]
 
-function sortByValueAndIndex(s1, s2) {
-  return Array.from(new Set((s1 + s2).split("").sort())).join("");
+function sortByValueAndIndex(arr1, arr2) {
+  return arr2
+    .filter((index) => index < arr1.length)
+    .map((index) => arr1[index]);
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -23,7 +27,7 @@ function sortByValueAndIndex(s1, s2) {
 //console.log(sortByValueAndIndex(72971))
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
-console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
+//console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
@@ -42,7 +46,7 @@ console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex({"java":10, "Ruby":80,"Python":65, "RubyonRails":92}))
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9))
 //console.log(sortByValueAndIndex([17,17,17,"a",17,17,17]))
-//console.log(sortByValueAndIndex(["a","b","c","d"], [3,0,2,8,3]))
+console.log(sortByValueAndIndex(["a", "b", "c", "d"], [3, 0, 2, 8, 3]));
 //console.log(sortByValueAndIndex("Beggegeggineggnegg"))
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
