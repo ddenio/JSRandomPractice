@@ -1,14 +1,9 @@
-// How could i solve this JS problem:
+// Find all duplicates in an array
+//Going to use the filter method, along with the 'arr.indexOf()' method and compare it to our current index, if the indexOf !=
+//index, then it is a duplicate
 
-// Unscramble the eggs.
-// The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
-// Example
-// unscrambleEggs("Beggegeggineggneggeregg"); => "Beginner"
-
-// use .replace() method to replace 'egg' with empty string, ""
-
-function sortByValueAndIndex(str) {
-  return str.replace(/egg/g, "");
+function sortByValueAndIndex(arr) {
+  return arr.filter((e, index) => arr.indexOf(e) != index);
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
@@ -16,7 +11,7 @@ function sortByValueAndIndex(str) {
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
 // );
 //console.log(sortByValueAndIndex("a         **&*&c"))
-//console.log(sortByValueAndIndex(['a','b','b','d']))
+console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"))
 //console.log(sortByValueAndIndex("1 7 3 4"))
@@ -43,7 +38,7 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9))
 //console.log(sortByValueAndIndex([17,17,17,"a",17,17,17]))
 //console.log(sortByValueAndIndex(["a", "b", "c", "d"], [3, 0, 2, 8, 3]));
-console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
+//console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
 //console.log(sortByValueAndIndex("codewars"))
