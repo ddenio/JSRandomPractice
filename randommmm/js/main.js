@@ -1,17 +1,17 @@
-// Find all duplicates in an array
-//Going to use the filter method, along with the 'arr.indexOf()' method and compare it to our current index, if the indexOf !=
-//index, then it is a duplicate
+// How can I write a function to convert a list of string numbers, seperated by a colon :, into a list of comma seperated numbers?
+
+// e.g. starting out with let matches = ["3:1", "2:2", "0:1", "4:0", "1:2", "2:0", "3:3", "1:0", "0:0", "2:1"];
 
 function sortByValueAndIndex(arr) {
-  return arr.filter((e) => arr.indexOf(e) != arr.lastIndexOf(e));
+  return arr.map((e) => [e.split(":").join(",")]);
 }
 
-//console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
+console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
 // console.log(
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
 // );
 //console.log(sortByValueAndIndex("a         **&*&c"))
-console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
+//console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"))
 //console.log(sortByValueAndIndex("1 7 3 4"))
