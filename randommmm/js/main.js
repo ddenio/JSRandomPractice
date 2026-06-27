@@ -1,23 +1,28 @@
-// How can we iterate through each digit in a Number and sum the digits together?
-//Convert our number to a string, use the split method to pput the digits into an array, then we can use the reduce method to Sum the digits, with
-//    converting each digit back into a number
+// How can we have an array input of two numbers, and return the difference of the 'spoonerized' version of both numbers?
+// i.e., swap the first digit of each number then subtract?
 
-function sortByValueAndIndex(num) {
-  return String(num)
-    .split("")
-    .reduce((sum, digit) => sum + Number(digit), 0);
+// I.e., input -> [12,34]      ---> 32 - 14 = 18
+//first swap the [0] digits of the elements, then subtract
+
+function sortByValueAndIndex(arr) {
+  const a = String(arr[0]);
+  const b = String(arr[1]);
+  const swapped1 = Number(b[0] + a.slice(1)); // b's first digit + rest of a  →  32
+  const swapped2 = Number(a[0] + b.slice(1)); // a's first digit + rest of b  →  14
+  return swapped1 - swapped2;
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
 // console.log(
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
 // );
+console.log(sortByValueAndIndex([12, 34]));
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"))
 //console.log(sortByValueAndIndex("1 7 3 4"))
-console.log(sortByValueAndIndex(72971));
+//console.log(sortByValueAndIndex(72971));
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
