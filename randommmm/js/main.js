@@ -1,15 +1,13 @@
 // How can we have an array input of two numbers, and return the difference of the 'spoonerized' version of both numbers?
 // i.e., swap the first digit of each number then subtract?
 
-// I.e., input -> [12,34]      ---> 32 - 14 = 18
-//first swap the [0] digits of the elements, then subtract
+//convert the number to a string, so that we can split the number into an array, from there we can use the reduce method to get the sum.
 
 function sortByValueAndIndex(arr) {
-  const a = String(arr[0]);
-  const b = String(arr[1]);
-  const swapped1 = Number(b[0] + a.slice(1)); // b's first digit + rest of a  →  32
-  const swapped2 = Number(a[0] + b.slice(1)); // a's first digit + rest of b  →  14
-  return swapped1 - swapped2;
+  return (
+    Number(String(arr[1]).split("")[0] + String(arr[0]).split("")[1]) -
+    Number(String(arr[0]).split("")[0] + String(arr[1]).split("")[1])
+  );
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -22,7 +20,7 @@ console.log(sortByValueAndIndex([12, 34]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"))
 //console.log(sortByValueAndIndex("1 7 3 4"))
-//console.log(sortByValueAndIndex(72971));
+//console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
