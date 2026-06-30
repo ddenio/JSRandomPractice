@@ -1,8 +1,9 @@
-// Write a function to capitalize the first letter of a word:
-//Utilzied slice() method, and .toUpperCase() method
+// How can we seperate a string by word length?
+
+//Will use .split(" ") to split by word, then can use .sort((a,b) => a.length - b.length)
 
 function sortByValueAndIndex(str) {
-  return str[0].toUpperCase() + str.slice(1);
+  return str.split(" ").sort((a, b) => a.length - b.length);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -13,7 +14,7 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"))
+console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
@@ -41,7 +42,7 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
-console.log(sortByValueAndIndex("codewars"));
+//console.log(sortByValueAndIndex("codewars"));
 //console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(
 //   sortByValueAndIndex([
