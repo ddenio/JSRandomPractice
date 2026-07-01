@@ -3,7 +3,7 @@
 //index, then it is a duplicate
 
 function sortByValueAndIndex(arr) {
-  return arr.filter((e, index) => arr.indexOf(e) != index);
+  return arr.filter((e) => arr.indexOf(e) != arr.lastIndexOf(e));
 }
 
 //console.log(sortByValueAndIndex(["3:1","2:2","0:1","4:0"]))
