@@ -1,9 +1,11 @@
-// How can we seperate a string by word length?
+// Given two integer arrays a, b, both of length >= 1,
+//create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
 
-//Will use .split(" ") to split by word, then can use .sort((a,b) => a.length - b.length)
-
-function sortByValueAndIndex(str) {
-  return str.split(" ").sort((a, b) => a.length - b.length);
+function sortByValueAndIndex(arr1, arr2) {
+  return (
+    arr1.reduce((total, curr) => total + curr ** 2, 0) >
+    arr2.reduce((total, curr) => total + curr ** 3, 0)
+  );
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -14,10 +16,10 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
+//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
-//console.log(sortByValueAndIndex([1,2,3,4,5],[1,3,5,7]))
+console.log(sortByValueAndIndex([1, 2, 3, 4, 5], [1, 3, 5, 7]));
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
