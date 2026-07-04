@@ -19,7 +19,7 @@ function sortByValueAndIndex(arr1, arr2) {
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
-console.log(sortByValueAndIndex([1, 2, 3, 4, 5], [1, 3, 5, 7]));
+console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
