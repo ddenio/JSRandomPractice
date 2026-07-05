@@ -1,11 +1,13 @@
-// Given two integer arrays a, b, both of length >= 1,
-//create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+// How could i go about solving this problem:
 
-function sortByValueAndIndex(arr1, arr2) {
-  return (
-    arr1.reduce((total, curr) => total + curr ** 2, 0) >
-    arr2.reduce((total, curr) => total + curr ** 3, 0)
-  );
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+//we want to modify every element (by adding the index +1), so we could use the map method for this
+
+function sortByValueAndIndex(arr) {
+  return arr.map((e, index) => `${index + 1}: ${e}`);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -19,8 +21,8 @@ function sortByValueAndIndex(arr1, arr2) {
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
-console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+//console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
+console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
