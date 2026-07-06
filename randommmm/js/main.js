@@ -1,13 +1,9 @@
-// How could i go about solving this problem:
-
-// Write a function which takes a list of strings and returns each line prepended by the correct number.
-
-// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
-
-//we want to modify every element (by adding the index +1), so we could use the map method for this
+// how can we find the smallest number in an array
+// can use the sort() method, then [0] to grab smallest
+// also can use Math.min(...arr)
 
 function sortByValueAndIndex(arr) {
-  return arr.map((e, index) => `${index + 1}: ${e}`);
+  return arr.sort()[0];
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
