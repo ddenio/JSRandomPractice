@@ -1,9 +1,9 @@
-// how can we find the smallest number in an array
-// can use the sort() method, then [0] to grab smallest
-// also can use Math.min(...arr)
+// how can we find the smallest and largest number in an array
+// can use the sort() method, then [0] to grab smallest, then [arr.length-1] to grab largest
+// also can use Math.min(...arr) Math.max(...arr)
 
 function sortByValueAndIndex(arr) {
-  return arr.sort()[0];
+  return `Smallest Number: ${Math.min(...arr)}, Largest number: ${Math.max(...arr)}`;
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
