@@ -1,9 +1,11 @@
-// how can we find the smallest and largest number in an array
-// can use the sort() method, then [0] to grab smallest, then [arr.length-1] to grab largest
-// also can use Math.min(...arr) Math.max(...arr)
+// How could we Define a method/function that removes from a given array of integers all the values contained in a second array.
+// Examples (input -> output):
+// * [1, 1, 2, 3, 1, 2, 3, 4], [1, 3] -> [2, 2, 4]
+// * [1, 1, 2, 3, 1, 2, 3, 4, 4, 3, 5, 6, 7, 2, 8], [1, 3, 4, 2] -> [5, 6, 7, 8]
+// * [8, 2, 7, 2, 3, 4, 6, 5, 4, 4, 1, 2, 3], [2, 4, 3] -> [8, 7, 6, 5, 1]
 
-function sortByValueAndIndex(arr) {
-  return `Smallest Number: ${Math.min(...arr)}, Largest number: ${Math.max(...arr)}`;
+function sortByValueAndIndex(arr, markedElements) {
+  return arr.filter((e) => !markedElements.includes(e));
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -17,8 +19,8 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
-//console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
+//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
