@@ -1,11 +1,9 @@
-//How could we find the smallest number in an array?
+// How can we easily solve this problem:
 
-//two ways:
-//first: sort() array then return array[0]
-//second: Math.min(...array)
-
+// //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.Return your answer as a number.
+// could use reduce method while converting each current element into a number
 function sortByValueAndIndex(arr) {
-  return `First method: ${arr.sort()[0]}. Second method: ${Math.min(...arr)}`;
+  return arr.reduce((total, curr) => total + Number(curr), 0);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -20,11 +18,11 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
-//console.log(sortByValueAndIndex(["1",2,"5",10,"23"]))
+console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
 //console.log(sortByValueAndIndex(324354))
