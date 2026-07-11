@@ -1,9 +1,10 @@
-// How can we easily solve this problem:
+// How can I merge these two arrays, and only keep 1 of each number (no duplicates)? [1,3,5,7,9,11,12], [1,2,3,4,5,10,12]
 
-// //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.Return your answer as a number.
-// could use reduce method while converting each current element into a number
-function sortByValueAndIndex(arr) {
-  return arr.reduce((total, curr) => total + Number(curr), 0);
+// .concat() then filter() e => indexOf last index of
+
+function sortByValueAndIndex(arr1, arr2) {
+  const finArr = arr1.concat(arr2);
+  return finArr.filter((e, index) => finArr.indexOf(e) === index);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -22,7 +23,7 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
-console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
+//console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
 //console.log(sortByValueAndIndex(['true','flick','taco','flick','flick','green']))
 //console.log(sortByValueAndIndex(''))
 //console.log(sortByValueAndIndex(324354))
@@ -41,7 +42,7 @@ console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
 //console.log(sortByValueAndIndex(["a", "b", "c", "d"], [3, 0, 2, 8, 3]));
 //console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
-//console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
+console.log(sortByValueAndIndex([1, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8]));
 //console.log(sortByValueAndIndex("codewars"));
 //console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(
