@@ -1,16 +1,12 @@
-// We have a JS problem that wants us to start out with a boolean of true, and then change to the opposite boolean everytime the word 'flick'
-// shows up in an array, while any other word pushes the current boolean value to a new array, how do we do this?
-
+// What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
+// Example(Input --> Output)
+// "apple ban" --> ["apple 5", "ban 3"]
+// "you will win" -->["you 3", "will 4", "win 3"]
+// Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
+// Note: String will have at least one element; words will always be separated by a space.
+//use map method to add string.length
 function sortByValueAndIndex(arr) {
-  let arrBoolean = true;
-  let final = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == "flick") {
-      arrBoolean = !arrBoolean;
-    }
-    final.push(arrBoolean);
-  }
-  return final;
+  return arr.split(" ").map((e) => `${e} ${e.length}`);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -21,7 +17,7 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
+console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
@@ -30,9 +26,9 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
 //console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
-console.log(
-  sortByValueAndIndex(["true", "flick", "taco", "flick", "flick", "flick"]),
-);
+// console.log(
+//   sortByValueAndIndex(["true", "flick", "taco", "flick", "flick", "flick"]),
+// );
 //console.log(sortByValueAndIndex(''))
 //console.log(sortByValueAndIndex(324354))
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
