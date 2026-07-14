@@ -1,12 +1,9 @@
-// What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
-// Example(Input --> Output)
-// "apple ban" --> ["apple 5", "ban 3"]
-// "you will win" -->["you 3", "will 4", "win 3"]
-// Your task is to write a function that takes a String and returns an Array/list with the length of each word added to each element .
-// Note: String will have at least one element; words will always be separated by a space.
-//use map method to add string.length
+// How can we easily solve this problem (which method)?
+
+// //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+//we want ot filter this array and use modulus operator
 function sortByValueAndIndex(arr) {
-  return arr.split(" ").map((e) => `${e} ${e.length}`);
+  return arr.filter((e, index) => e % index == 0);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -17,11 +14,11 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
+//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
