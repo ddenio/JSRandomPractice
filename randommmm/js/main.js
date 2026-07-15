@@ -1,9 +1,13 @@
-// How can we easily solve this problem (which method)?
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
 
-// //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
-//we want ot filter this array and use modulus operator
+// split string, .reverse() method, then join again.
 function sortByValueAndIndex(arr) {
-  return arr.filter((e, index) => e % index == 0);
+  return arr
+    .split(" ")
+    .map((e) => e.split("").reverse().join(""))
+    .join(" ");
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -14,11 +18,11 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
+console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
