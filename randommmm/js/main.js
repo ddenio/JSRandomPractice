@@ -1,13 +1,7 @@
-// Complete the solution so that it reverses the string passed into it.
-// 'world'  =>  'dlrow'
-// 'word'   =>  'drow'
-
-// split string, .reverse() method, then join again.
+// How do we sort an array of numbers from lowest to highest ?
+// arr.sort((a,b) => a-b)
 function sortByValueAndIndex(arr) {
-  return arr
-    .split(" ")
-    .map((e) => e.split("").reverse().join(""))
-    .join(" ");
+  return arr.sort((a, b) => a - b);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -18,11 +12,11 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
-console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
+//console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
