@@ -1,5 +1,5 @@
 // How do we sort an array of numbers from lowest to highest ?
-// arr.sort((a,b) => a-b)
+// arr sort method; arr.sort((a,b) => a-b)
 function sortByValueAndIndex(arr) {
   return arr.sort((a, b) => a - b);
 }
