@@ -1,20 +1,30 @@
-// How can we have an array input of two numbers, and return the difference of the 'spoonerized' version of both numbers?
-// i.e., swap the first digit of each number then subtract?
+// How could i solve this javascript problem:
 
-//convert the number to a string, so that we can split the number into an array, from there we can use the reduce method to get the sum.
+// Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
+// Example
+// scrollingText("codewars") should return:
+// [ "CODEWARS",
+//   "ODEWARSC",
+//   "DEWARSCO",
+//   "EWARSCOD",
+//   "WARSCODE",
+//   "ARSCODEW"
+//   "RSCODEWA",
+//   "SCODEWAR" ]
 
-function sortByValueAndIndex(arr) {
-  return (
-    Number(String(arr[1]).split("")[0] + String(arr[0]).split("")[1]) -
-    Number(String(arr[0]).split("")[0] + String(arr[1]).split("")[1])
-  );
+function sortByValueAndIndex(str) {
+  let final = [];
+  for (let i = 0; i < str.length; i++) {
+    final.push((str.slice(i) + str.slice(0, i)).toUpperCase());
+  }
+  return final;
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
 // console.log(
 //   sortByValueAndIndex("ortsp", ["sport", "parrot", "ports", "matey"]),
 // );
-console.log(sortByValueAndIndex([12, 34]));
+//console.log(sortByValueAndIndex([12, 34]));
 //console.log(sortByValueAndIndex("a         **&*&c"))
 //console.log(sortByValueAndIndex(["a", "b", "b", "d", "d", "f", "g", "h", "h"]));
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
@@ -46,7 +56,7 @@ console.log(sortByValueAndIndex([12, 34]));
 //console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
-//console.log(sortByValueAndIndex("codewars"))
+console.log(sortByValueAndIndex("codewars"));
 //console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(
 //   sortByValueAndIndex([
