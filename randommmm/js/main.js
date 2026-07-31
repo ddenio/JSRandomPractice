@@ -15,7 +15,7 @@
 function sortByValueAndIndex(str) {
   let final = [];
   for (let i = 0; i < str.length; i++) {
-    final.push((str.slice(i) + str.slice(0, i)).toUpperCase());
+    final.push(str.slice(i) + str.slice(0, i));
   }
   return final;
 }
