@@ -1,23 +1,7 @@
-// How could i solve this javascript problem:
-
-// Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
-// Example
-// scrollingText("codewars") should return:
-// [ "CODEWARS",
-//   "ODEWARSC",
-//   "DEWARSCO",
-//   "EWARSCOD",
-//   "WARSCODE",
-//   "ARSCODEW"
-//   "RSCODEWA",
-//   "SCODEWAR" ]
+// How could we seperate a string by word length?
 
 function sortByValueAndIndex(str) {
-  let final = [];
-  for (let i = 0; i < str.length; i++) {
-    final.push(str.slice(i) + str.slice(0, i));
-  }
-  return final;
+  return str.split(" ").sort((a, b) => a.length - b.length);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -41,7 +25,7 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex(''))
 //console.log(sortByValueAndIndex(324354))
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
-//console.log(sortByValueAndIndex("the green blob ran ban super fast"))
+console.log(sortByValueAndIndex("the green blob ran ban super fast"));
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
 //console.log(sortByValueAndIndex([34.5,56.2,11,13]))
 //console.log(sortByValueAndIndex(["a",1]))
@@ -56,7 +40,7 @@ function sortByValueAndIndex(str) {
 //console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1,3,4,5,6,7], [1,2,3,4,5,6,7,8]))
-console.log(sortByValueAndIndex("codewars"));
+//console.log(sortByValueAndIndex("codewars"));
 //console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(
 //   sortByValueAndIndex([
