@@ -1,13 +1,11 @@
-// How can we split up a numbers digits in an array for sorting, then sor tthe digits indt descending order , makeing hte largest possible number
-// to split, we have to convert the number into an integer, can then use the sort method (.sort(b-a)) then .join and convert back to number
+// If i want to do something to an array if EVERY element in the array is a number, but if there is even one Alphabetic character to return undefined,
+// what could i do?
 function sortByValueAndIndex(arr) {
-  return Number(
-    arr
-      .toString()
-      .split("")
-      .sort((a, b) => b - a)
-      .join(""),
-  );
+  //could use .every method using typeof inside , but first returning undefined if not every number then if every element number return something at end
+  if (!arr.every((e) => typeof e === "number")) {
+    return "Every element is NOT a number";
+  }
+  return "Every element is a number!";
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -22,7 +20,7 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
@@ -31,7 +29,7 @@ function sortByValueAndIndex(arr) {
 //   sortByValueAndIndex(["true", "flick", "taco", "flick", "flick", "flick"]),
 // );
 //console.log(sortByValueAndIndex(''))
-console.log(sortByValueAndIndex(324354));
+//console.log(sortByValueAndIndex(324354));
 //console.log(sortByValueAndIndex('aA', 'aAaBBBBBB'))
 //console.log(sortByValueAndIndex("the green blob ran ban super fast"));
 //console.log(sortByValueAndIndex([1,2,3,4,5]))
