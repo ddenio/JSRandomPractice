@@ -1,11 +1,16 @@
-// If i want to do something to an array if EVERY element in the array is a number, but if there is even one Alphabetic character to return undefined,
-// what could i do?
-function sortByValueAndIndex(arr) {
-  //could use .every method using typeof inside , but first returning undefined if not every number then if every element number return something at end
-  if (!arr.every((e) => typeof e === "number")) {
-    return "Every element is NOT a number";
-  }
-  return "Every element is a number!";
+// How can we Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+//we concat (add/combine) the two together, split into an array, do a new Set, then join back into a string for return results
+
+function sortByValueAndIndex(a, b) {
+  return [...new Set(a + b)].sort().join("");
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -20,7 +25,7 @@ function sortByValueAndIndex(arr) {
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
-console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
+//console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
 //console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
@@ -47,7 +52,7 @@ console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8]));
 //console.log(sortByValueAndIndex("codewars"));
-//console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
+console.log(sortByValueAndIndex("xyaabbbccccdefww", "xxxxyyyyabklmopq"));
 // console.log(
 //   sortByValueAndIndex([
 //     {
