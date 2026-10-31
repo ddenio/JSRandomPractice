@@ -1,15 +1,8 @@
-// You are given two arrays arr1 and arr2, where arr2 always contains integers. Arr2 is the indexes of arr1 that we want to keep the values of.
-// Write a function such that:
-// For arr1 = ['a', 'a', 'a', 'a', 'a'], arr2 = [2, 4] the function returns ['a', 'a']
-// For arr1 = [0, 1, 5, 2, 1, 8, 9, 1, 5], arr2 = [1, 4, 7] the function returns [1, 1, 1]
-// For arr1 = [0, 3, 4], arr2 = [2, 6] the function returns [4]
-// For arr1=["a","b","c","d"] , arr2=[2,2,2], the function returns ["c","c","c"]
-// For arr1=["a","b","c","d"], arr2=[3,0,2] the function returns ["d","a","c"]
+//write a function to find all duplicates in an array
 
-//first filter out any number (index) from arr2 that isnt an index in arr 1
-function sortByValueAndIndex(a, b) {
-  arr2 = b.filter((e) => e < a.length);
-  return arr2.map((e) => a[e]);
+function sortByValueAndIndex(a) {
+  //use filter, filter by indexOf and lastIndexOf
+  return a.filter((e) => a.indexOf(e) !== a.lastIndexOf(e));
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -23,11 +16,11 @@ function sortByValueAndIndex(a, b) {
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
 //console.log(sortByValueAndIndex(777));
-console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
+//console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
-//console.log(sortByValueAndIndex([1,2,1,2,3,3,4,5,6,6]))
+console.log(sortByValueAndIndex([1, 2, 1, 2, 3, 3, 4, 5, 6, 6, 16, 16, 17]));
 //console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
 // console.log(
 //   sortByValueAndIndex(["true", "flick", "taco", "flick", "flick", "flick"]),
