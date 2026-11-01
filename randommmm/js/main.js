@@ -1,8 +1,11 @@
-//write a function to find all duplicates in an array
+// The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
+// Example
+// unscrambleEggs("Beggegeggineggneggeregg"); => "Beginner"
+// //             "B---eg---in---n---er---"
 
 function sortByValueAndIndex(a) {
-  //use filter, filter by indexOf and lastIndexOf
-  return a.filter((e) => a.indexOf(e) !== a.lastIndexOf(e));
+  //use replace method to replace 'egg' with ""
+  return a.replace(/egg/g, "");
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -20,7 +23,7 @@ function sortByValueAndIndex(a) {
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
 //console.log(sortByValueAndIndex("1 -5 2 10 15 3"))
-console.log(sortByValueAndIndex([1, 2, 1, 2, 3, 3, 4, 5, 6, 6, 16, 16, 17]));
+//console.log(sortByValueAndIndex([1, 2, 1, 2, 3, 3, 4, 5, 6, 6, 16, 16, 17]));
 //console.log(sortByValueAndIndex(["1", 2, "5", 10, "23"]));
 // console.log(
 //   sortByValueAndIndex(["true", "flick", "taco", "flick", "flick", "flick"]),
@@ -40,7 +43,7 @@ console.log(sortByValueAndIndex([1, 2, 1, 2, 3, 3, 4, 5, 6, 6, 16, 16, 17]));
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9))
 //console.log(sortByValueAndIndex([17,17,17,"a",17,17,17]))
 //console.log(sortByValueAndIndex(["a", "b", "c", "d"], [3, 0, 2, 8, 3]));
-//console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
+console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8]));
 //console.log(sortByValueAndIndex("codewars"));
