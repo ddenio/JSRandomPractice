@@ -1,11 +1,10 @@
-// The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
-// Example
-// unscrambleEggs("Beggegeggineggneggeregg"); => "Beginner"
-// //             "B---eg---in---n---er---"
+//How can we iterate through each digit in a Number and sum the digits together?
 
 function sortByValueAndIndex(a) {
-  //use replace method to replace 'egg' with ""
-  return a.replace(/egg/g, "");
+  //first convert the number to an string, split it, use reduce method with current value converted to a number
+  return String(a)
+    .split("")
+    .reduce((tot, curr) => tot + Number(curr), 0);
 }
 
 //console.log(sortByValueAndIndex(["3:1", "2:2", "0:1", "4:0"]));
@@ -18,7 +17,7 @@ function sortByValueAndIndex(a) {
 // console.log(sortByValueAndIndex("September 5, 2014", "January 7, 2014"))
 //console.log(sortByValueAndIndex("taco sauce green cat no tacocart"));
 //console.log(sortByValueAndIndex("1 7 3 4"))
-//console.log(sortByValueAndIndex(777));
+console.log(sortByValueAndIndex(777));
 //console.log(sortByValueAndIndex([1, 2, 3, 8, 5], [1, 3, 5, 7]));
 //console.log(sortByValueAndIndex([22, -6, 32, 82, 9, 25]));
 //console.log(sortByValueAndIndex("abcdeeeeewwwwwwllllppp", "xxxxzazzzzfff"));
@@ -43,7 +42,7 @@ function sortByValueAndIndex(a) {
 //console.log(sortByValueAndIndex([1,2,11,4,5], lessThan9))
 //console.log(sortByValueAndIndex([17,17,17,"a",17,17,17]))
 //console.log(sortByValueAndIndex(["a", "b", "c", "d"], [3, 0, 2, 8, 3]));
-console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
+//console.log(sortByValueAndIndex("Beggegeggineggneggeregg"));
 //console.log(sortByValueAndIndex(['a','b','c','d'], [2,0,2,3,0,5]))
 //console.log(sortByValueAndIndex([1, 3, 4, 5, 6, 7], [1, 2, 3, 4, 5, 6, 7, 8]));
 //console.log(sortByValueAndIndex("codewars"));
